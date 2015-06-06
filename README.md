@@ -1,4 +1,5 @@
 # cs-batch-image
+
 Batch image resize script
 
 This script reads images out of a source directory and resizes to two sizes:
@@ -15,18 +16,27 @@ The new images are renamed as well: img0001.jpg, img0002.jpg.
 can of course be optimized by adding further options and checks. 
 Back up images if you do use it.
 
+
 ## Requirements
 
 - Bash shell
 - [ImageMagic](http://www.imagemagick.org/script/index.php)
 
+
 ## Running the script
 
 ```
-
 sh resize.sh --source /dir/images
 
-
 ```
+
+
+## Command line options
+
+- `--source` or `-s`    Source directory with original images
+- `--dest` or `-d`      Destination directory where converted images are saved 
+  to. Defaults to source/resized
+- `--help` or `-h`      Show commands and usage
+- `--dry`               Run without conversion
 
 
