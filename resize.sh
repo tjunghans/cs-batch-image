@@ -16,11 +16,12 @@ function showHelp() {
   echo "$(cat help.txt)"
 }
 
-# Defaults
+# Defaults and options
 dryRun=false
 src=
 dest=
 thumb_prefix="tn_"
+timestamp=$(date +%s)
 
 # Command line options
 while [ "$1" != "" ]; do
@@ -45,18 +46,13 @@ while [ "$1" != "" ]; do
   shift
 done
 
-echo $dryRun
-echo
-echo
-
 if [[ -z "$src" ]]; then
-  echo -e "${RED}Please provide --source | -s${NC}" 
+  echo -e "${RED}Please provide --source and the path to the images${NC}" 
   exit 1
 fi
 
 if [[ -z "$dest" ]]; then
-  $dest=$src/resized
-  echo -e "Saving images in $dest"
+  dest="$src/resized-$timestamp"
 fi
 
 heading "${BOLD}Resizing${RESET_BOLD}"

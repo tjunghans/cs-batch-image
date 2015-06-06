@@ -27,16 +27,15 @@ Back up images if you do use it.
 
 ```
 sh resize.sh --source /dir/images
-
 ```
 
 
 ## Command line options
 
-- `--source` or `-s`    Source directory with original images
-- `--dest` or `-d`      Destination directory where converted images are saved 
-  to. Defaults to source/resized
-- `--help` or `-h`      Show commands and usage
-- `--dry`               Run without conversion
+- `--source` or `-s` is the path of the directory with the original images
+- `--dest` or `-d` is the path of the directory where the converted images are saved to. If skipped, a directory named `resized-"timestamp"` is created in the source directory.
+- `--help` or `-h` shows all commands
+- `--dry` runs script without doing anything
+- `--thumb-prefix` or `-t` specifies the prefix to add to the thumb nails. Defaults to `tn_`
 
 
