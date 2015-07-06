@@ -89,7 +89,7 @@ cd $src
 heading "Change to directory: $src"
 heading "Resizing images and creating thumbs..."
 
-for img in $(ls *.jpg); do
+for img in $(ls | grep -i '\.jpg$'); do
   (( i++ ))
   printf -v img_counter "%04d" $i
   new_img_name="img$img_counter.jpg"
