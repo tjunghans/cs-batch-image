@@ -98,9 +98,9 @@ for img in $(ls | grep -i '\.jpg$'); do
   fi
   printf '%s\n' "Created 1600x1600 $new_img_name" 
   if [ "$dryRun" = false ]; then
-    convert $src/$img -resize 120x120\> $dest/$thumb_prefix$new_img_name
+    convert $src/$img -resize 240x240\> $dest/$thumb_prefix$new_img_name
   fi
-  printf '%s\n' "Created 120x120 $thumb_prefix$new_img_name"
+  printf '%s\n' "Created 240x240 $thumb_prefix$new_img_name"
   echo 
 done
 
